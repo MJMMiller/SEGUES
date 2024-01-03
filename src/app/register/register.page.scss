@@ -1,0 +1,94 @@
+ion-content{
+    --background: none;
+    background-image: url('https://images.unsplash.com/photo-1470224114660-3f6686c562eb?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(to bottom, transparent, black), url('https://images.unsplash.com/photo-1470224114660-3f6686c562eb?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+#div-ionContent{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+ion-card{
+    background-color: white;
+    width: 28rem;
+    height: 37rem;
+    border-radius: 1rem;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+svg{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+ion-card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ion-card-content{
+    margin-bottom: 2rem;
+}
+ion-button{
+    width: 10rem;
+}
+.btn_Login{
+    --margin-top: 4rem;
+    --background: #CCCCCC;
+    --color: white;
+    --border-radius: 2rem;
+}
+.btn_Signup{
+    --margin-top: 4rem;
+    --background: #FF4B3A;
+    --color: white;
+    --border-radius: 2rem;
+}
+ion-label{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+    margin-top: 1.5rem;
+    color: #000; 
+}
+ion-input{
+    width: 15rem;
+    margin-bottom: 1rem;
+}
+.input1{
+    margin-top: -1rem;
+}
+.input2{
+    margin-top: -1rem;
+}
+.btn_Sign{
+    --background: #FF4B3A;
+    --color: white;
+    --border-radius: 2rem;
+    width: 17rem;
+    height: 2.5rem; 
+    margin-top: -2.4rem;  
+}
+ion-text{
+    margin-top: 1rem;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    color: #000; 
+}
+.input-email{
+    margin-top: -2rem;
+}
+a{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline; 
+}
