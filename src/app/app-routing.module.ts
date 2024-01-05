@@ -23,6 +23,18 @@ const routes: Routes = [
     path: 'panel-seguridad',
     loadChildren: () => import('./panel-seguridad/panel-seguridad.module').then( m => m.PanelSeguridadPageModule)
   },
+  {
+    path: 'interfaz-user',
+    loadChildren: () => import('./interfaz-user/interfaz-user.module').then( m => m.InterfazUserPageModule)
+  },
+  {
+    path: 'interfaz-user-a',
+    loadChildren: () => import('./interfaz-user-a/interfaz-user-a.module').then( m => m.InterfazUserAPageModule)
+  },
+  {
+    path: 'interfaz-user-b',
+    loadChildren: () => import('./interfaz-user-b/interfaz-user-b.module').then( m => m.InterfazUserBPageModule)
+  },
 ];
 
 @NgModule({
