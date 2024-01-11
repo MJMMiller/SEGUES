@@ -14,3 +14,8 @@ Interfaz Admin 80%.....
 ```
 ionic - pages - desingn
 ```
+### v.1.4 - App
+Interfaz Admin 90%.....
+```
+ionic - pages - desingn - function
+```

@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { InterfazUserAPageRoutingModule } from './interfaz-user-a-routing.module';
 
 import { InterfazUserAPage } from './interfaz-user-a.page';
+import { UbicacionComponent } from '../ubicacion/ubicacion.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { InterfazUserAPage } from './interfaz-user-a.page';
     IonicModule,
     InterfazUserAPageRoutingModule
   ],
-  declarations: [InterfazUserAPage]
+  declarations: [InterfazUserAPage, UbicacionComponent]
 })
 export class InterfazUserAPageModule {}

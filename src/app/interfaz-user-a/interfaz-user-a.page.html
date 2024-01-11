@@ -1,6 +1,14 @@
 <ion-content [fullscreen]="true">
-  
 
   <ion-img src="assets/imagenes/Interfaz_User_A.jpeg"></ion-img>
 
+  <ion-button id="est1" (click)="toggleCard()" [ngClass]="{'ocultar': ocultarBoton}"> </ion-button>
+  <app-ubicacion [ngClass]="{'oculto': !mostrarCard}" sector="A" fila="1" columna="1" ></app-ubicacion>
+
+  <ion-button id="est2" (click)="toggleCard1()" [ngClass]="{'ocultar': ocultarBoton}"> </ion-button>
+  <app-ubicacion [ngClass]="{'oculto': !mostrarCard1}" sector="A" fila="1" columna="2" ></app-ubicacion>
+
+  <ion-button id="est3" (click)="toggleCard2()" [ngClass]="{'ocultar': ocultarBoton}"> </ion-button>
+  <app-ubicacion [ngClass]="{'oculto': !mostrarCard2}" sector="A" fila="1" columna="3" ></app-ubicacion>
+  
 </ion-content>
