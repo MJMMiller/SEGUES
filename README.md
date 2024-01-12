@@ -1,4 +1,4 @@
-# SEGES
+# SEGUES
 ***
 ## _Sistema de Estacionamiento y Gestión de Unidades y Espacios 'S_
 ***
@@ -9,7 +9,7 @@
 - Now I study at UETS school in the area of Informatics.
 ***
 # 💫 About Us:
-🔭 We're currently working on SEGES
+🔭 We're currently working on SEGUES
 👯‍♂️ We're looking to collaborate on Commercial Centers
 🤝 We're lookinh for help with improve our Tesis
 🌱 We're currently laerning AI
