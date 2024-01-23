@@ -36,19 +36,19 @@
     
       <ion-card-content>
 
-        <ion-input label="User Name" labelPlacement="floating" [counter]="true" maxlength="20" aria-label="Medium input" color="medium" placeholder="Medium input" class="input1"></ion-input>
+        <ion-input [(ngModel)]="UserName" label="User Name" labelPlacement="floating" [counter]="true" maxlength="20" aria-label="Medium input" color="medium" placeholder="Medium input" class="input1"></ion-input>
 
         <ion-input  type="email" label="E-mail"  labelPlacement="floating"
           helperText="Enter a valid e-mail" errorText="Invalid e-mail"
            ngModel        email        aria-label="Medium input" 
-          color="medium"         placeholder="Medium input" class="input-email">
+          color="medium"         placeholder="Medium input" class="input-email" [(ngModel)]="Email">
         </ion-input>
 
-        <ion-input label="Password" type="password" value="password" aria-label="Medium input" color="medium" placeholder="Medium input"></ion-input>
+        <ion-input [(ngModel)]="Password" label="Password" type="password" value="password" aria-label="Medium input" color="medium" placeholder="Medium input"></ion-input>
       
       </ion-card-content>
 
-      <ion-button class="btn_Sign" href="login">Sign up</ion-button>
+      <ion-button (click)="imprimirUser()" (click)="imprimirMail()" (click)="imprimirContra()" class="btn_Sign" href="login">Sign up</ion-button>
       <ion-text>Already have an account?</ion-text><a href="login">Log in</a>
 
     </ion-card>

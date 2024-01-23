@@ -7,6 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterPage implements OnInit {
 
+  UserName: string = '';
+
+  imprimirUser() {
+    console.log(this.UserName);
+  }
+
+  Email: string = '';
+
+  imprimirMail() {
+    console.log(this.Email);
+  }
+
+  Password: string = '';
+
+  imprimirContra() {
+    console.log(this.Password);
+  }
+
+
+
   constructor() { }
 
   ngOnInit() {

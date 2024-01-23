@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'interfaz-user-b',
     loadChildren: () => import('./interfaz-user-b/interfaz-user-b.module').then( m => m.InterfazUserBPageModule)
   },
+  {
+    path: 'confirmar',
+    loadChildren: () => import('./confirmar/confirmar.module').then( m => m.ConfirmarPageModule)
+  },
 ];
 
 @NgModule({

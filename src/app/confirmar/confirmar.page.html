@@ -1,0 +1,28 @@
+<ion-content>
+
+  <ion-img src="assets/imagenes/Interfaz_User_A.jpg"></ion-img>
+
+  <ion-card [ngClass]="{'oculto': !mostrarCardPrincipal}">
+    <ion-card-header>
+      <ion-label>Seguro que quieres</ion-label>
+      <ion-label>confirmar</ion-label>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-button id="botonSi" (click)="mostrarComponente()">Si</ion-button>
+      
+      
+
+      <a href="../interfaz-user/">
+        <ion-button color="danger" id="botonNo">No</ion-button>
+      </a>
+
+    </ion-card-content>
+
+  </ion-card>
+  <app-gracias [ngClass]="{'oculto': !mostrarTuComponente}"></app-gracias>
+  
+</ion-content>
+
+

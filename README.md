@@ -19,3 +19,8 @@ Interfaz Admin 90%.....
 ```
 ionic - pages - desingn - function
 ```
+### v.1.4.1 - App
+Interfaz Admin 92%.....
+```
+ionic - pages - desingn - function - variable
+```

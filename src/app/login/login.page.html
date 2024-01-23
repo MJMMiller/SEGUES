@@ -36,20 +36,20 @@
     
       <ion-card-content>
 
-        <ion-input  type="email" label="E-mail"  labelPlacement="floating"
+        <ion-input  [(ngModel)]="Email" type="email" label="E-mail"  labelPlacement="floating"
           helperText="Enter a valid e-mail" errorText="Invalid e-mail"
            ngModel        email        aria-label="Medium input" 
           color="medium"         placeholder="Medium input">
       </ion-input>
 
-        <ion-input class="input2"  labelPlacement="floating" type="password" value="password" aria-label="Medium input" color="medium" placeholder="Medium input">
+        <ion-input [(ngModel)]="Password" class="input2"  labelPlacement="floating" type="password" value="password" aria-label="Medium input" color="medium" placeholder="Medium input">
           <div slot="label">Password<ion-text color="danger"> (Required) </ion-text></div>
         </ion-input>
 
       </ion-card-content>
 
       <a href="panel-seguridad">
-        <ion-button class="btn_Log">Log in</ion-button>
+        <ion-button class="btn_Log" (click)="imprimirMail()" (click)="imprimirContra()">Log in</ion-button>
       </a>
       <ion-text>Forgot Password?</ion-text>
 
