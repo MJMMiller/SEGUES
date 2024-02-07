@@ -32,8 +32,27 @@ export class PanelSeguridadPage implements OnInit {
   desactivarCamara(): void {
     this.mostrarCamara = false;
   }
+  // Reloj
+  tiempo: string="";
+  fecha: string="";
+  constructor() {
+    this.actualizarReloj();
+    setInterval(() => this.actualizarReloj(), 1000);
+   }
+   
+   private actualizarReloj(): void {
+    const f = new Date();
+    const dia = ('0' + f.getDate()).slice(-2);
+    const mes = ('0' + (f.getMonth() + 1)).slice(-2);
+    const anio = f.getFullYear();
+    const diaSemana = f.getDay();
 
-  constructor() { }
+    this.tiempo = f.toLocaleTimeString();
+
+    const semana = ['DOMINGO', 'LUNES', 'MARTES', 'MIÉRCOLES', 'JUEVES', 'VIERNES', 'SÁBADO'];
+    const showSemana = semana[diaSemana];
+    this.fecha = `${showSemana} ${dia}-${mes}-${anio}`;
+  }
 
   ngOnInit() {
   }

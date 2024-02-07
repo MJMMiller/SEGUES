@@ -1,15 +1,13 @@
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedDataServiceService } from '../Services/shared-data-service.service';
 
-
 @Component({
-  selector: 'app-confirmar',
-  templateUrl: './confirmar.page.html',
-  styleUrls: ['./confirmar.page.scss'],
-  
+  selector: 'app-confirmar-b',
+  templateUrl: './confirmar-b.page.html',
+  styleUrls: ['./confirmar-b.page.scss'],
 })
-export class ConfirmarPage implements OnInit {
+export class ConfirmarBPage implements OnInit {
 
   mostrarCardPrincipal: boolean = true;
   mostrarTuComponente: boolean = false;

@@ -6,28 +6,32 @@ ion-content{
     background-size: cover;
     background: linear-gradient(to bottom, transparent, black), url('https://images.unsplash.com/photo-1470224114660-3f6686c562eb?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
-
+#container::before{
+    position: absolute;
+    content: "";
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .5;
+}
 #div-ionContent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 800px;
-    width: 1280px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
-ion-card{
-    margin-top: -3rem;
+ion-card{ 
     background-color: transparent;
-    height: 725px;
-    width: 1260px;
-
-}
-#card1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 ion-card-header{
     background-color: black;
+    height: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    
 }
 ion-card-title{
     color: white;
@@ -36,7 +40,7 @@ ion-card-title{
 }
 ion-card-subtitle{
     color: white;
-    font-size: 20px;
+    font-size: 1;
     font-weight: 700;
 }
 ion-row{
@@ -56,7 +60,8 @@ ion-col{
     color: white;
 }
 ion-icon{
-    font-size: 1rem;
+    font-size: 1.5rem;
+    margin-right: 1rem;
 }
 .col-icon11{
     color: white;
@@ -141,9 +146,10 @@ ion-card-content{
     background-color: white;
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem;
+    width: 100%;
     padding: 1rem;
-    margin: 0%;
-    margin-top: 0.25rem;
+    position: absolute;
+    top: 71%;
 
 }
 ion-list-header {
@@ -158,25 +164,36 @@ ion-list{
 ion-item{
     --background: #00000000;
 }
+ion-item ion-label{
+    display: flex;
+    align-items: center;
+
+}
 ion-toast{
     --color: red;
 }
 ion-input{
-    width: 10rem;
+    width: 20rem;
+    margin-left: 1rem;
 }
 #save{
-    margin-top: -1rem;
+    margin-top: 1rem;
     width: 100%;
     height: 5%;
     --background: #ffffff;
-    --color: rgb(0, 0, 0);
-    --border-radius: 1rem;
+     --color: rgb(0, 0, 0);
+}
+#save1{
+    width: 100%;
+    height: 5%;
+    --background: #ffffff;
+     --color: rgb(0, 0, 0);
 }
 #delate-account{
     margin-top: -1rem;
 }
 webcam{
-    margin-top: 10rem;
+    margin-top: 4rem;
     margin-left: 2rem;
     height: 100%;
 }
@@ -186,7 +203,7 @@ webcam{
     color: #ffffff;
     text-align: center;
     position: absolute;
-    left: 41%;
+    left: 42%;
     top: 50%;
     transform: translate(-50%,-50%);
 }
@@ -218,4 +235,52 @@ p {
 ion-title{
     margin-left: 2rem;
     font-family: 'Share Tech Mono', monospace;
+}
+//-----------------------------------------------------------------------------------------------------
+ion-accordion {
+    margin: 0 auto;
+} 
+ion-accordion.accordion-expanding,
+ion-accordion.accordion-expanded {
+    width: calc(100% - 32px);
+    margin: 16px auto;
+}
+
+ion-accordion.accordion-collapsing ion-item[slot='header'],
+ion-accordion.accordion-collapsed ion-item[slot='header'] {
+    --background: var(--ion-color-light);
+    --color: var(--ion-color-light-contrast);
+}
+ion-accordion.accordion-expanding ion-item[slot='header'],
+ion-accordion.accordion-expanded ion-item[slot='header'] {
+    --background: var(--ion-color-primary);
+    --color: var(--ion-color-primary-contrast);
+}
+.ion-padding1{
+    height: 5rem;
+}
+.contraseñaIn{
+    width: 14rem;
+}
+.select1{
+    margin-left: 1rem;
+}
+.card-w{
+    height: 10em;
+}
+.card-1{
+    width: 24rem;
+}
+.icono{
+    margin-left: 1rem;
+    font-size: 1.5em;
+}
+.labelSub{
+    font-size: 1rem;
+}
+.telf1{
+    height: 10rem;
+}
+.select2{
+    margin-top: -1.2rem;
 }

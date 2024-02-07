@@ -1,6 +1,6 @@
 <ion-content>
 
-  <ion-img src="assets/imagenes/Interfaz_User_A.jpg"></ion-img>
+  <ion-img src="assets/imagenes/Interfaz_User_B.png"></ion-img>
 
   <ion-card [ngClass]="{'oculto': !mostrarCardPrincipal}">
     <ion-card-header>
@@ -12,8 +12,6 @@
 
       <ion-button id="botonSi" (click)="mostrarComponente()" (click)="enviarConfirmacion(1)">Si</ion-button>
       
-      
-
       <a href="../interfaz-user/">
         <ion-button color="danger" id="botonNo">No</ion-button>
       </a>
@@ -21,7 +19,7 @@
     </ion-card-content>
 
   </ion-card>
-  <app-gracias [ngClass]="{'oculto': !mostrarTuComponente}"></app-gracias>
+  <app-gracias2 [ngClass]="{'oculto': !mostrarTuComponente}"></app-gracias2>
   
 </ion-content>
 

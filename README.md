@@ -72,3 +72,8 @@ ionic - pages - desingn - function - variable
 ```
 =======
 >>>>>>> 0a4107996f16ad794a74586b2fb021bb0e3d0d92
+### v.1.4.2 - App
+Interfaz Admin 95%.....
+```
+ionic - pages - desingn - function 90%
+```

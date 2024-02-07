@@ -1,0 +1,208 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ADMINISTRACION DE PERFIL : </ion-title>
+
+    <div class="reloj">
+      <ion-label class="fecha">{{fecha}}</ion-label>
+      <ion-label class="tiempo">{{tiempo}}</ion-label>
+    </div>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" id="container">
+<!-- ----------------------------------------------------------------------------------------------------------------------- -->
+  <ion-grid>
+    <ion-row>
+      <ion-col >
+
+        <ion-accordion-group > 
+
+          <ion-accordion value="first">
+            <ion-item slot="header">
+              <ion-label><ion-icon name="storefront"></ion-icon>Empresa</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content"><ion-input aria-label="Dark input" color="dark" label=" Ingrese su empresa: " [counter]="true"></ion-input></div>
+          </ion-accordion>
+      
+        </ion-accordion-group>
+
+      </ion-col>
+      <ion-col>
+
+        <ion-accordion-group>
+
+          <ion-accordion value="first">
+            <ion-item slot="header">
+              <ion-label><ion-icon name="build"></ion-icon> Role</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content"><ion-input aria-label="Dark input" color="dark" label=" Ingrese su rol: " [counter]="true"></ion-input></div>
+          </ion-accordion>
+      
+        </ion-accordion-group>
+
+      </ion-col>
+      <ion-col>
+
+        <ion-accordion-group>
+
+          <ion-accordion value="first">
+            <ion-item slot="header">
+              <ion-label><ion-icon name="mail-open"></ion-icon>E - mail</ion-label>
+            </ion-item>
+            <div class="ion-padding" class="ion-padding1" slot="content"><ion-input email ngModel errorText="Invalid email" type="email" helperText="Enter a valid email"  aria-label="Dark input" color="dark" label="Ingrese su correo: " [counter]="true"></ion-input></div>
+          </ion-accordion>
+      
+        </ion-accordion-group>
+
+      </ion-col>
+    </ion-row>
+    <!-- ----------------------------------------------------- -->
+    <ion-row>
+      <ion-col>
+
+        <ion-accordion-group class="select2">
+
+          <ion-accordion value="first">
+            <ion-item slot="header">
+              <ion-label><ion-icon name="person-circle"></ion-icon>Usuario</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content"><ion-input aria-label="Dark input" color="dark" label="Ingrese usuario: " [counter]="true"></ion-input></div>
+          </ion-accordion>
+      
+        </ion-accordion-group>
+
+      </ion-col>
+
+      <ion-col>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-icon class="icono" name="lock-closed"></ion-icon>
+            <ion-card-subtitle>Contraseña</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Password</ion-label>
+              <ion-input type="{{ showPassword1 ? 'text' : 'password' }}" [(ngModel)]="password1" class="contraseñaIn"></ion-input>
+              <ion-icon name="{{ showPassword1 ? 'eye-off' : 'eye' }}" slot="end" (click)="togglePasswordVisibility1()"></ion-icon>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+      <ion-col>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-icon class="icono" name="lock-open"></ion-icon>
+            <ion-card-subtitle>Cambiar Contraseña</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Password</ion-label>
+              <ion-input type="{{ showPassword ? 'text' : 'password' }}" [(ngModel)]="password" class="contraseñaIn"></ion-input>
+              <ion-icon name="{{ showPassword ? 'eye-off' : 'eye' }}" slot="end" (click)="togglePasswordVisibility()"></ion-icon>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+
+        <ion-accordion-group>
+
+          <ion-accordion value="first">
+            <ion-item slot="header">
+              <ion-label><ion-icon name="location-sharp"></ion-icon>Region</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content" class="select1">
+              <ion-select placeholder="Seleccione su region">
+              <ion-select-option value="ECU">Ecuador</ion-select-option>
+              <ion-select-option value="MEX">Mexico</ion-select-option>
+              <ion-select-option value="USA">EEUU</ion-select-option>
+              <ion-select-option value="ESP">España</ion-select-option>
+              <ion-select-option value="COL">Colombia</ion-select-option>
+              <ion-select-option value="CHL">Chile</ion-select-option>
+              <ion-select-option value="ARG">Argentina</ion-select-option>
+            </ion-select>
+          </div>
+          </ion-accordion>
+      
+        </ion-accordion-group>
+
+      </ion-col>
+
+      <ion-col>
+
+        <ion-card class="card-w">
+          <ion-card-header>
+            <ion-icon class="icono" name="call"></ion-icon>
+            <ion-card-subtitle>Numero de Telefono</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content >
+            <div class="ion-padding"  slot="content"><ion-input aria-label="Dark input" color="dark" label="Ingrese su Telefono: " [counter]="true" maxlength="10"></ion-input></div>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+      <ion-col>
+
+        <ion-card class="card-1">
+          <ion-card-header >
+            <ion-icon class="icono" name="return-down-back" ></ion-icon>
+            <ion-card-subtitle class="labelSub">Regresar a Seguridad</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-button href="../panel-seguridad/" id="save1">Regresar al penel de seguridad ( Cam ) </ion-button>
+            <ion-button id="save">Guardar Cambios</ion-button>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+      
+    </ion-row>
+
+  </ion-grid>
+
+  <div id="card_CentroAyuda">
+    <ion-label class="tit_text">Centro de ayuda</ion-label>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="col_img">
+          <ion-img class="img_centro" src="assets/imagenes/Btn_PreguntasF.png"></ion-img>
+          <ion-label class="text">Preguntas Frecuentes</ion-label>
+        </ion-col>
+        <ion-col class="col_img">
+          <ion-img class="img_centro" src="assets/imagenes/Btn_Manual.png"></ion-img>
+          <ion-label class="text">Manual de Instrucciones</ion-label>
+        </ion-col>
+        <ion-col class="col_img">
+          <ion-img class="img_centro" src="assets/imagenes/Btn_Comentarios.png"></ion-img>
+          <ion-label class="text">Comentarios del Usuario</ion-label>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col class="col_img1">
+          <ion-img  class="img_centro" src="assets/imagenes/Btn_Novedades.png"></ion-img>
+          <ion-label class="text">Novedades</ion-label>
+        </ion-col>
+
+         <ion-col class="col_img2">
+          <ion-img class="img_centro" src="assets/imagenes/Btn_Acerca.png"></ion-img>
+          <ion-label class="text">Acerca de</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

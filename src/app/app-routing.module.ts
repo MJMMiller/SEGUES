@@ -39,6 +39,14 @@ const routes: Routes = [
     path: 'confirmar',
     loadChildren: () => import('./confirmar/confirmar.module').then( m => m.ConfirmarPageModule)
   },
+  {
+    path: 'confirmar-b',
+    loadChildren: () => import('./confirmar-b/confirmar-b.module').then( m => m.ConfirmarBPageModule)
+  },
+  {
+    path: 'administration',
+    loadChildren: () => import('./administration/administration.module').then( m => m.AdministrationPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,17 +1,25 @@
-<ion-content [fullscreen]="true" id="container">
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>PANEL DE ADMINISTRACION : </ion-title>
+
+    <div class="reloj">
+      <ion-label class="fecha">{{fecha}}</ion-label>
+      <ion-label class="tiempo">{{tiempo}}</ion-label>
+    </div>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
   <div id="div-ionContent">
 
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Panel de Administracion</ion-card-title>
-        <ion-card-subtitle>Fecha : 03 - 01 - 23 </ion-card-subtitle>
-        <ion-card-subtitle>Hora  : 17:53</ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
+    <ion-card id="card1">
 
         <ion-grid>
+
           <ion-row>
+
             <ion-col>
               <ion-button (click)="activarCamara()" class="button-panel"><ion-img src="assets/imagenes/Bt_Iglesia.png"></ion-img></ion-button>
             </ion-col>
@@ -21,72 +29,66 @@
               <ion-label class="grid-label">Iglesia</ion-label>
             </ion-col>
 
-            <ion-col><ion-icon name="videocam" class="col-icon11"></ion-icon></ion-col>
-            <ion-col><ion-icon name="checkmark-circle" class="col-icon1"></ion-icon></ion-col>
-
-          </ion-row>
-
-          <ion-row>
             <ion-col>
-              <a href="">
-                <ion-button class="btn_DonBosco" class="button-panel">
-                  <ion-img src="assets/imagenes/Bt_DonBosco.png"></ion-img>
-                </ion-button>
-              </a>
+              <ion-icon name="videocam" class="col-icon11"></ion-icon>
             </ion-col>
+
             <ion-col>
-              <ion-label class="grid-label">Sector A</ion-label>
-              <ion-label class="grid-label">Av. Don Bosco</ion-label>
+              <ion-icon name="checkmark-circle" class="col-icon1"></ion-icon>
             </ion-col>
-            <ion-col ><ion-icon name="videocam" class="col-icon11"></ion-icon></ion-col>
-            <ion-col><ion-icon name="checkmark-circle" class="col-icon1"></ion-icon></ion-col>
+
           </ion-row>
       
           <ion-row>
+
             <ion-col>
                 <ion-button id="btn_Cancha" class="button-panel" (click)="activarCamara()">
                   <ion-img src="assets/imagenes/Bt_Cancha.png"></ion-img>
                 </ion-button>
             </ion-col>
+
             <ion-col>
               <ion-label class="grid-label">Sector B</ion-label>
               <ion-label class="grid-label">Av. Don Bosco</ion-label>
             </ion-col>
-            <ion-col><ion-icon name="videocam-off" class="col-icon11"></ion-icon></ion-col>
-            <ion-col><ion-icon name="close-circle" class="col-icon2"></ion-icon></ion-col>
+
+            <ion-col>
+              <ion-icon name="videocam-off" class="col-icon11"></ion-icon>
+            </ion-col>
+
+            <ion-col>
+              <ion-icon name="close-circle" class="col-icon2"></ion-icon>
+            </ion-col>
+
           </ion-row>
 
           <ion-row>
+
             <ion-col>
-              <a href="">
-                <ion-button class="btn_DonBosco" class="button-panel">
-                  <ion-img src="assets/imagenes/Bt_DonBosco.png"></ion-img>
-                </ion-button>
-              </a>
-            </ion-col>
-            <ion-col>
-              <ion-label class="grid-label">Sector B</ion-label>
-              <ion-label class="grid-label">Av. Don Bosco</ion-label>
-            </ion-col>
-            <ion-col><ion-icon name="videocam" class="col-icon11"></ion-icon></ion-col>
-            <ion-col><ion-icon name="checkmark-circle" class="col-icon1"></ion-icon></ion-col>
+              <ion-button id="btn_Cancha" class="button-panel" href="../administration/">
+                <ion-img src="assets/imagenes/informacion.jpg"></ion-img>
+              </ion-button>
+          </ion-col>
+
+          <ion-col>
+            <ion-label class="grid-label" >Informacion ...</ion-label>
+          </ion-col>
+
+          <ion-col>
+          </ion-col>
+
+          <ion-col>
+          </ion-col>
+
           </ion-row>
+
+
 
         </ion-grid>
 
+      </ion-card>
 
-      </ion-card-content>
-    </ion-card>
-
-
-     <ion-card> 
-      <ion-card-header>
-        <ion-card-title>Administracion de perfil</ion-card-title>
-        <ion-card-subtitle>Company : SuperMaxi</ion-card-subtitle>
-        <ion-card-subtitle>Role : Admin</ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
+      <ion-card>
 
         <ion-item>
           <webcam *ngIf="mostrarCamara" [height]="500" [width]="500" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam>
@@ -94,89 +96,8 @@
 
         <ion-button (click)="desactivarCamara()" *ngIf="mostrarCamara" id="boton-camara">Salir</ion-button> 
 
-          
-        <ion-list lines="none">
-          <ion-list-header>
-            <ion-label>Nombre de usuario</ion-label>
-            <ion-input aria-label="Dark input" color="dark" placeholder="Luchito"></ion-input>
-          </ion-list-header>
-          <ion-list-header>
-            <ion-label>E - Mail</ion-label>
-            <ion-input aria-label="Dark input" color="dark" placeholder="luchitoFC69@gmail.com"></ion-input>
-          </ion-list-header>
-          <ion-list-header>
-            <ion-label>Contraseña</ion-label>
-            <ion-input aria-label="Dark input" color="dark" placeholder="********"></ion-input>
+      </ion-card>
 
-          </ion-list-header>
-          <ion-list-header>
-            <ion-label>Cambiar contraseña</ion-label>
-            <ion-label>>--</ion-label>
-          </ion-list-header>
-
-          <ion-list-header>
-            <ion-label>Numero telefonico</ion-label>
-            <ion-label>+593</ion-label>
-            <ion-input label="" aria-label="Dark input" color="dark" ></ion-input>
-          </ion-list-header>
-          <ion-list-header>
-
-            <ion-label>Region</ion-label>
-            <ion-item>
-              <ion-select placeholder="">
-                <ion-select-option value="ECU">Ecuador</ion-select-option>
-                <ion-select-option value="MEX">Mexico</ion-select-option>
-                <ion-select-option value="USA">EEUU</ion-select-option>
-                <ion-select-option value="ESP">España</ion-select-option>
-                <ion-select-option value="COL">Colombia</ion-select-option>
-                <ion-select-option value="CHL">Chile</ion-select-option>
-                <ion-select-option value="ARG">Argentina</ion-select-option>
-              </ion-select>
-            </ion-item>
-          </ion-list-header>
-
-          <ion-list-header id="delate-account">
-            <ion-label>Eliminar cuenta permanentemente</ion-label>
-            <ion-button id="open-toast"><ion-toggle></ion-toggle><br /><br /></ion-button>
-            <ion-toast trigger="open-toast" message="Tu cuenta ha sido eliminada" [duration]="9000" icon="close-circle-outline"></ion-toast>
-          </ion-list-header>
-        </ion-list>
-
-        <ion-button id="save">Save Changes</ion-button>
-        
-        <div id="card_CentroAyuda">
-          <ion-label class="tit_text">Centro de ayuda</ion-label>
-          <ion-grid>
-            <ion-row>
-              <ion-col class="col_img">
-                <ion-img class="img_centro" src="assets/imagenes/Btn_PreguntasF.png"></ion-img>
-                <ion-label class="text">Preguntas Frecuentes</ion-label>
-              </ion-col>
-              <ion-col class="col_img">
-                <ion-img class="img_centro" src="assets/imagenes/Btn_Manual.png"></ion-img>
-                <ion-label class="text">Manual de Instrucciones</ion-label>
-              </ion-col>
-              <ion-col class="col_img">
-                <ion-img class="img_centro" src="assets/imagenes/Btn_Comentarios.png"></ion-img>
-                <ion-label class="text">Comentarios del Usuario</ion-label>
-              </ion-col>
-            </ion-row>
-            
-            <ion-row>
-              <ion-col class="col_img1">
-                <ion-img  class="img_centro" src="assets/imagenes/Btn_Novedades.png"></ion-img>
-                <ion-label class="text">Novedades</ion-label>
-              </ion-col>
-
-               <ion-col class="col_img2">
-                <ion-img class="img_centro" src="assets/imagenes/Btn_Acerca.png"></ion-img>
-                <ion-label class="text">Acerca de</ion-label>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </div>
-
-      </ion-card-content>
-    </ion-card>
   </div>
+
 </ion-content>

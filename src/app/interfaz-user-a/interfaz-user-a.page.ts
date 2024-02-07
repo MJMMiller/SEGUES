@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedDataServiceService } from '../Services/shared-data-service.service';
 
 @Component({
   selector: 'app-interfaz-user-a',
@@ -179,8 +180,11 @@ export class InterfazUserAPage implements OnInit {
   }
 
 
-  constructor() { }
+  constructor(private sharedDataService: SharedDataServiceService) { }
 
+  enviarIdUnico(texto: string, numero1: number, numero2: number) {
+    this.sharedDataService.enviarId(texto, numero1, numero2);
+  }
   ngOnInit() {
   }
 
